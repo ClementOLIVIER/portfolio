@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <header>
-      This is a header
-    </header>
+  <div class="bg-white">
+    <!-- scroll-behavior: smooth; -->
+    <LayoutHeader />
     <main>
       <slot />
     </main>
