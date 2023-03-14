@@ -31,10 +31,8 @@
             to="/contact"
             class="
                 p-2
-                text-white rounded-2xl
-                ring-2 ring-white
-                transition-colors duration-200
-                hover:ring-yellow-200
+                bg-white text-orange-700 rounded-md
+              hover:ring-2 hover:ring-gray-400
               "
           >
             Hire me

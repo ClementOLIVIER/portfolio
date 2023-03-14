@@ -1,11 +1,11 @@
 <template>
-  <!-- Add bottom border to the header -->
   <header
     class="
       fixed
       w-full
       p-4
-      bg-gradient-to-r from-primary-400 to-primary-600
+      bg-white
+      bg-opacity-70
       transition-colors duration-300
       border-white border-b-2
     "
@@ -16,7 +16,7 @@
       <!-- My Name -->
       <NuxtLink
         to="/"
-        class="flex items-center flex-shrink-0 text-white"
+        class="flex items-center flex-shrink-0 text-purple-700"
       >
         <span class="font-semibold text-lg">
           Clément OLIVIER
@@ -61,7 +61,7 @@
             class="
               p-2
               rounded
-            text-white
+            text-purple-700
               hover:ring-2 hover:ring-gray-200
             "
           >
@@ -72,7 +72,7 @@
             class="
               p-2
               rounded
-            text-white
+            text-purple-700
               hover:ring-2 hover:ring-gray-200
             "
           >
@@ -83,7 +83,7 @@
             class="
               p-2
               rounded
-            text-white
+            text-purple-700
               hover:ring-2 hover:ring-gray-200
             "
           >
@@ -94,7 +94,7 @@
             class="
               p-2
               rounded
-            text-white
+            text-purple-700
               hover:ring-2 hover:ring-gray-200
             "
           >
@@ -104,7 +104,7 @@
             to="/contact"
             class="
               p-2
-              bg-white text-primary-300 rounded-md
+              bg-orange-700 text-white rounded-md
               hover:ring-2 hover:ring-gray-400
             "
           >
