@@ -1,62 +1,58 @@
 <template>
   <header
     class="
-      fixed flex items-center
-      h-16 w-full
+      w-full
       p-4
       bg-primary-300
       shadow-lg transition-colors duration-300
-      md:px-6
     "
   >
     <nav
-      class="flex grow flex-wrap items-center justify-between "
+      class="flex flex-wrap items-center justify-between"
     >
-      <!-- Welcome -->
+      <!-- My Name -->
       <NuxtLink
         to="/"
+        class="flex items-center flex-shrink-0 text-white"
       >
-        Clément OLIVIER <!-- TODO: Add transition with transparent temporary-->
+        <span class="font-semibold text-lg">
+          Clément OLIVIER
+        </span>
       </NuxtLink>
       <!-- Toggle Mobile Menu -->
-      <div class="flex items-centerp-2">
+      <div class="block md:hidden">
         <button
-          aria-label="Toggle Menu"
           class="
-            inline-flex
-            p-2 ml-3
-            bg-white text-primary-300 rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200
+            flex items-center p-2
+            text-white rounded-lg
+            hover:ring-2 hover:ring-gray-200
             transition-colors duration-200
-            md:hidden
           "
-          @click="toggleMobileNavigation"
+          @click="toggleMenu"
         >
-          <Icon
-            v-if="!isOpen"
-            name="fa-bars"
-          />
-          <Icon
-            v-else
-            name="fa-times"
-          />
+          <Icon v-if="!isOpen" name="fa6-solid:bars" />
+          <Icon v-else name="fa6-solid:xmark" />
         </button>
       </div>
       <!-- Menu -->
       <div
-        :class="isOpen ? 'flex' : 'hidden'"
+        :class="isOpen ? 'block' : 'hidden'"
         class="
-          absolute top-16
-          flex flex-col py-2
-        bg-primary-300
-          md:relative md:top-0
-          md:py-2
-          md:flex md:flex-col md:mt-0 md:gap-2 md:my-auto
+        w-full
+        flex-grow
+        pt-6
+        text-right
+        md:block
+        md:items-center
+        md:w-auto  md:pt-0
         "
       >
         <div
-          class="flex flex-col"
+          class="
+            flex flex-col
+            md:flex-row md:justify-end
+            md:gap-2 md:my-auto"
         >
-          <!-- TODO: Add transition -->
           <NuxtLink
             to="/about"
             class="
@@ -64,7 +60,6 @@
               rounded
             text-white
               hover:ring-2 hover:ring-gray-200
-              transition-colors duration-300
             "
           >
             About Me
@@ -76,7 +71,6 @@
               rounded
             text-white
               hover:ring-2 hover:ring-gray-200
-              transition-colors duration-300
             "
           >
             Services
@@ -88,7 +82,6 @@
               rounded
             text-white
               hover:ring-2 hover:ring-gray-200
-              transition-colors duration-300
             "
           >
             Portfolio
@@ -100,7 +93,6 @@
               rounded
             text-white
               hover:ring-2 hover:ring-gray-200
-              transition-colors duration-300
             "
           >
             Blog
@@ -109,9 +101,8 @@
             to="/contact"
             class="
               p-2
-              bg-white text-primary-300 rounded-lg
+              bg-white text-primary-300 rounded-md
               hover:ring-2 hover:ring-gray-400
-              transition-colors duration-200
             "
           >
             Hire me
@@ -125,7 +116,7 @@
 <script setup>
 const isOpen = ref(false)
 
-const toggleMobileNavigation = () => {
+const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }
 </script>
