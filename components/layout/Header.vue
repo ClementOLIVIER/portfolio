@@ -2,6 +2,7 @@
   <!-- Add bottom border to the header -->
   <header
     class="
+      fixed
       w-full
       p-4
       bg-gradient-to-r from-primary-400 to-primary-600
