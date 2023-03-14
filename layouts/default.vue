@@ -1,6 +1,5 @@
 <template>
-  <div class="bg-white">
-    <!-- scroll-behavior: smooth; -->
+  <div>
     <LayoutHeader />
     <main>
       <slot />

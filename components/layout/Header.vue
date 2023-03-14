@@ -1,10 +1,13 @@
 <template>
+  <!-- Add bottom border to the header -->
   <header
     class="
+      fixed
       w-full
       p-4
-      bg-primary-300
-      shadow-lg transition-colors duration-300
+      bg-gradient-to-r from-primary-400 to-primary-600
+      transition-colors duration-300
+      border-white
     "
   >
     <nav
