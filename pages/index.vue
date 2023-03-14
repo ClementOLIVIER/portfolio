@@ -1,9 +1,10 @@
 <template>
   <!-- Landing Page-->
+  <!-- bg-[url('~/assets/images/landing-page-background.png')]
+      bg-cover bg-center bg-no-repeat -->
   <section
     class="
-      bg-[url('~/assets/images/landing-page-background.png')]
-      bg-cover bg-center bg-no-repeat
+      bg-gradient-to-r from-background-200 to-background-300
       min-h-screen
       flex items-center justify-center
     "

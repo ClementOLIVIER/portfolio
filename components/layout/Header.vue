@@ -5,7 +5,6 @@
       w-full
       p-4
       bg-white
-      bg-opacity-70
       transition-colors duration-300
       border-white border-b-2
     "
