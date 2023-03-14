@@ -12,7 +12,12 @@
     <!-- TODO: Check hero in https://codewithsadee.github.io/portfolio/# for background image -->
     <div class="grid grid-cols-2 gap-4 mx-10">
       <!-- Hero Content -->
-      <div class="text-left text-white backdrop-blur-sm">
+      <div
+        class="
+          flex flex-col justify-center items-center
+          text-left text-white backdrop-blur-lg pl-4
+          "
+      >
         <div class="flex flex-col gap-2">
           <span>Hello I'm </span>
           <strong>Clément OLIVIER</strong>
@@ -53,7 +58,7 @@
         <div
           class="
               absolute flex items-center gap-3 bg-white rounded-sm p-2
-              top-2 left-2
+              top-10 left-20
             "
         >
           <p class="text-black font-bold">
