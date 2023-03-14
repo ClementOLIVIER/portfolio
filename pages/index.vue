@@ -32,7 +32,7 @@
             to="/contact"
             class="
                 p-2
-                bg-white text-orange-700 rounded-md
+                bg-orange-700 text-white rounded-md
               hover:ring-2 hover:ring-gray-400
               "
           >
@@ -49,8 +49,8 @@
             loading="lazy"
             class="
               img-cover object-contain w-96
-              rounded-xl
-              border-4 border-white
+              rounded-md
+              border-2 border-white
             "
           >
         </div>
