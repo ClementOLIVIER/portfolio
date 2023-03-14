@@ -37,3 +37,14 @@ Locally preview production build:
 ```bash
 yarn preview
 ```
+
+
+# Docker
+## Build
+sudo docker build -t portfolio .
+
+## Interactive
+sudo docker run --interactive --tty --entrypoint /bin/sh portfolio
+
+## Run
+sudo docker run -p 3000:3000 portfolio

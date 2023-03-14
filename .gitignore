@@ -3,7 +3,7 @@ node_modules
 
 # Built files
 .nuxt
-dist
+.output
 
 # Development files (logs, caches, etc.)
 *.log
