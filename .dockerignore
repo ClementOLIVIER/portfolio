@@ -2,6 +2,9 @@
 # Visual Studio Code
 .vscode
 
+# Git
+**/.git
+
 # Node modules
 **/node_modules
 
@@ -10,5 +13,7 @@
 **/.output
 
 # Development files (logs, caches, etc.)
-**/*.log
 fly.toml
+
+# Ignore
+**/ignore
