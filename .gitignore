@@ -7,3 +7,6 @@ node_modules
 
 # Development files (logs, caches, etc.)
 *.log
+
+# Ignore folder
+/ignore

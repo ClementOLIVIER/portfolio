@@ -1,11 +1,12 @@
 <template>
   <header
     class="
-      fixed top-0 left-0 right-0 z-50
+      sticky top-0
+      z-10
+      w-full
       px-4 py-3
       bg-white
-      border-b border-gray-300
-      backdrop-blur-md
+      border-b border-gray-200
     "
   >
     <nav

@@ -2,14 +2,16 @@
   <!-- Landing Page-->
   <section
     class="
-      mt-10 md:mt-0
-      bg-gradient-to-r from-background-200 to-background-300 min-h-screen flex items-center justify-center
+      min-h-screen
+      flex items-center justify-center
+      pt-10 md:pt-0
+      bg-gradient-to-r from-background-200 to-background-300
     "
   >
     <!-- Hero Content -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-10">
       <div class="flex flex-col justify-center items-center text-left text-white backdrop-blur-lg pl-4">
-        <h1 class="text-3xl md:text-3xl font-bold mb-4 leading-tight">
+        <h1 class="text-3xl md:text-3xl font-bold mb-4">
           Hello, I'm <span class="text-purple-700">Clément OLIVIER</span>
         </h1>
         <p class="text-lg md:text-xl mb-8">
@@ -24,7 +26,7 @@
             class="
               bg-orange-700 text-white
               font-semibold
-              rounded-full py-2 px-6 hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 transition duration-300 ease-in-out
+              rounded-full py-2 px-6 hover:bg-purple-900 focus:outline-none focus:ring-2 transition duration-300 ease-in-out
             "
           >
             Hire me
