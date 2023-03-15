@@ -1,0 +1,14 @@
+# flyctl launch added from .gitignore
+# Visual Studio Code
+.vscode
+
+# Node modules
+**/node_modules
+
+# Built files
+**/.nuxt
+**/.output
+
+# Development files (logs, caches, etc.)
+**/*.log
+fly.toml
