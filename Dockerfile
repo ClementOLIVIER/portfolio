@@ -3,9 +3,14 @@ FROM node:19-alpine AS BUILD_IMAGE
 
 WORKDIR /app
 
+# Couchbase sdk requirements
+RUN apk update && apk add yarn curl bash && rm -rf /var/cache/apk/*
+
+
 # Install dependencies
 COPY package.json yarn.lock ./
-RUN yarn --frozen-lockfile
+
+RUN yarn --frozen-lockfile --production
 
 # Copy source code
 COPY . .
@@ -13,6 +18,34 @@ COPY . .
 # Build
 RUN yarn build
 
+# Prune dev dependencies
+RUN npm prune --omit=dev
+RUN npm install -g node-prune
+RUN node-prune
+
+# Remove remaining dev dependencies
+RUN rm -rf node_modules/typescript
+RUN rm -rf node_modules/@azure
+RUN rm -rf node_modules/@babel
+RUN rm -rf node_modules/rxjs
+RUN rm -rf node_modules/vite
+RUN rm -rf node_modules/lodash
+RUN rm -rf node_modules/@esbuild
+RUN rm -rf node_modules/caniuse-lite
+RUN rm -rf node_modules/@vue
+RUN rm -rf node_modules/nuxt
+RUN rm -rf node_modules/web-streams-polyfill
+RUN rm -rf node_modules/eslint
+RUN rm -rf node_modules/tailwindcss
+RUN rm -rf node_modules/@opentelemetry
+RUN rm -rf node_modules/@nuxt
+RUN rm -rf node_modules/@types
+RUN rm -rf node_modules/vue
+RUN rm -rf node_modules/unenv
+RUN rm -rf node_modules/rollup
+RUN rm -rf node_modules/js-sdsl
+RUN rm -rf node_modules/css-tree
+RUN rm -rf node_modules/@rollup
 
 # Run Image
 FROM node:19-alpine

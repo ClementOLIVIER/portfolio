@@ -1,11 +1,5 @@
 export default defineNuxtConfig({
-  modules: [
-    '@vueuse/nuxt',
-    '@pinia/nuxt',
-    '@nuxtjs/color-mode',
-    'nuxt-icon',
-    'nuxt-headlessui'
-  ],
+  modules: [],
   css: ['~/assets/css/tailwind.css'],
   postcss: {
     plugins: {
