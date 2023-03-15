@@ -1,9 +1,15 @@
 FROM node:19-alpine
 
-WORKDIR /portfolio
+WORKDIR /app
 
-COPY ./.output .
+COPY . .
+
+RUN yarn install
+
+RUN yarn build
+
+RUN rm -rf node_modules
 
 EXPOSE 3000
 
-ENTRYPOINT ["node", "server/index.mjs"]
+ENTRYPOINT ["node", ".output/server/index.mjs"]
