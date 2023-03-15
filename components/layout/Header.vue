@@ -1,12 +1,11 @@
 <template>
   <header
     class="
-      fixed
-      w-full
-      p-4
+      fixed top-0 left-0 right-0 z-50
+      px-4 py-3
       bg-white
-      transition-colors duration-300
-      border-white border-b-2
+      border-b border-gray-300
+      backdrop-blur-md
     "
   >
     <nav
@@ -15,9 +14,9 @@
       <!-- My Name -->
       <NuxtLink
         to="/"
-        class="flex items-center flex-shrink-0 text-purple-700"
+        class="flex items-center text-gray-900"
       >
-        <span class="font-semibold text-lg">
+        <span class="text-xl font-semibold">
           Clément OLIVIER
         </span>
       </NuxtLink>
@@ -26,8 +25,8 @@
         <button
           class="
             flex items-center p-2
-            text-white rounded-lg
-            hover:ring-2 hover:ring-gray-200
+            text-gray-900 rounded-lg
+            hover:bg-gray-200
             transition-colors duration-200
           "
           @click="toggleMenu"
@@ -58,10 +57,10 @@
           <NuxtLink
             to="/about"
             class="
-              p-2
-              rounded
-            text-purple-700
-              hover:ring-2 hover:ring-gray-200
+              px-3 py-2
+              rounded-md
+              text-gray-900
+              hover:bg-gray-200
             "
           >
             About Me
@@ -69,10 +68,10 @@
           <NuxtLink
             to="/services"
             class="
-              p-2
-              rounded
-            text-purple-700
-              hover:ring-2 hover:ring-gray-200
+              px-3 py-2
+              rounded-md
+              text-gray-900
+              hover:bg-gray-200
             "
           >
             Services
@@ -80,10 +79,10 @@
           <NuxtLink
             to="/portfolio"
             class="
-              p-2
-              rounded
-            text-purple-700
-              hover:ring-2 hover:ring-gray-200
+              px-3 py-2
+              rounded-md
+              text-gray-900
+              hover:bg-gray-200
             "
           >
             Portfolio
@@ -91,10 +90,10 @@
           <NuxtLink
             to="/blog"
             class="
-              p-2
-              rounded
-            text-purple-700
-              hover:ring-2 hover:ring-gray-200
+              px-3 py-2
+              rounded-md
+              text-gray-900
+              hover:bg-gray-200
             "
           >
             Blog
@@ -102,9 +101,9 @@
           <NuxtLink
             to="/contact"
             class="
-              p-2
+              px-4 py-2
               bg-orange-700 text-white rounded-md
-              hover:ring-2 hover:ring-gray-400
+              hover:bg-orange-800
             "
           >
             Hire me

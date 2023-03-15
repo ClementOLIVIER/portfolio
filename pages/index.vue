@@ -1,63 +1,51 @@
 <template>
   <!-- Landing Page-->
-  <!-- bg-[url('~/assets/images/landing-page-background.png')]
-      bg-cover bg-center bg-no-repeat -->
   <section
     class="
-      bg-gradient-to-r from-background-200 to-background-300
-      min-h-screen
-      flex items-center justify-center
+      mt-10 md:mt-0
+      bg-gradient-to-r from-background-200 to-background-300 min-h-screen flex items-center justify-center
     "
   >
-    <div />
-    <!-- TODO: Check hero in https://codewithsadee.github.io/portfolio/# for background image -->
-    <div class="grid grid-cols-2 gap-4 mx-10">
-      <!-- Hero Content -->
-      <div
-        class="
-          flex flex-col justify-center items-center
-          text-left text-white backdrop-blur-lg pl-4
-          "
-      >
-        <div class="flex flex-col gap-2">
-          <span>Hello I'm </span>
-          <strong>Clément OLIVIER</strong>
-          <span>Data Scientist, Product Designer & Full Stack Developer</span>
-          <p class="mt-4">
-            Adipisicing elit. Neque nulla voluptatum eos repellat deserunt nesciunt tempore porro totam. Adipisicing elit. Neque nulla voluptatum eos repellat deserunt nesciunt tempore porro totam. Adipisicing elit. Neque nulla voluptatum eos repellat deserunt nesciunt tempore porro totam.
-          </p>
-        </div>
-        <div class="flex justify-center items-center mt-4">
+    <!-- Hero Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-10">
+      <div class="flex flex-col justify-center items-center text-left text-white backdrop-blur-lg pl-4">
+        <h1 class="text-3xl md:text-3xl font-bold mb-4 leading-tight">
+          Hello, I'm <span class="text-purple-700">Clément OLIVIER</span>
+        </h1>
+        <p class="text-lg md:text-xl mb-8">
+          Data Scientist, Product Designer & Full Stack Developer
+        </p>
+        <p class="text-sm md:text-lg mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
+        </p>
+        <div class="flex justify-center items-center">
           <NuxtLink
             to="/contact"
             class="
-                p-2
-                bg-orange-700 text-white rounded-md
-              hover:ring-2 hover:ring-gray-400
-              "
+              bg-orange-700 text-white
+              font-semibold
+              rounded-full py-2 px-6 hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 transition duration-300 ease-in-out
+            "
           >
             Hire me
           </NuxtLink>
         </div>
       </div>
-
       <!-- Hero Banner -->
       <div class="relative flex justify-center items-center">
-        <div>
+        <div
+          class="flex justify-center items-center"
+        >
           <img
             src="~/assets/images/hero-picture.png"
             loading="lazy"
-            class="
-              img-cover object-contain w-96
-              rounded-md
-              border-2 border-white
-            "
+            class="img-cover object-contain w-3/4 rounded-md border-2 border-white"
           >
         </div>
         <div
           class="
               absolute flex items-center gap-3 bg-white rounded-sm p-2
-              top-10 left-20
+              top-5 right-0
             "
         >
           <p class="text-black font-bold">
