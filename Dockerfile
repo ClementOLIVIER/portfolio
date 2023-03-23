@@ -19,13 +19,15 @@ COPY . .
 RUN yarn build
 
 # Prune dev dependencies
+## Using npm prun
 RUN npm prune --omit=dev
+
+## Unsing node-prune
 RUN npm install -g node-prune
 RUN node-prune
 
-# Remove remaining dev dependencies (TODO: Should be checked with new versions)
+## Manually (Identified by running `du -sh ./node_modules/* | sort -nr | grep '\dM.*'`)
 RUN rm -rf node_modules/typescript
-RUN rm -rf node_modules/@azure
 RUN rm -rf node_modules/@babel
 RUN rm -rf node_modules/rxjs
 RUN rm -rf node_modules/vite
@@ -37,9 +39,7 @@ RUN rm -rf node_modules/nuxt
 RUN rm -rf node_modules/web-streams-polyfill
 RUN rm -rf node_modules/eslint
 RUN rm -rf node_modules/tailwindcss
-RUN rm -rf node_modules/@opentelemetry
 RUN rm -rf node_modules/@nuxt
-RUN rm -rf node_modules/@types
 RUN rm -rf node_modules/vue
 RUN rm -rf node_modules/unenv
 RUN rm -rf node_modules/rollup
