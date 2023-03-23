@@ -10,5 +10,20 @@
       class="
       "
     />
+    <LandingPortfolio
+      id="portfolio"
+      class="
+      "
+    />
+    <LandingAbout
+      id="about"
+      class="
+      "
+    />
+    <LandingContact
+      id="contact"
+      class="
+      "
+    />
   </div>
 </template>
