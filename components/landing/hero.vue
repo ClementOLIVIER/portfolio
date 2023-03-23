@@ -31,6 +31,7 @@
               hover:bg-orange-900
               transition duration-300
             "
+            @click.prevent="scrollToSection('#contact')"
           >
             Hire me
           </NuxtLink>
@@ -47,7 +48,7 @@
             class="img-cover object-contain w-3/4 rounded-md border-2 border-white"
           >
         </div>
-        <div
+        <!-- <div
           class="
               absolute flex items-center gap-3 bg-white rounded-sm p-2
               top-5 right-0
@@ -60,8 +61,12 @@
           <p class="font-semibold">
             Years of Experience
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import { scrollToSection } from '~/utils/ux'
+</script>

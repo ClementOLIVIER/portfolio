@@ -122,17 +122,11 @@
 </template>
 
 <script setup>
+import { scrollToSection } from '~/utils/ux'
+
 const isOpen = ref(false)
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
-}
-
-// TODO: Move to a utils file
-const scrollToSection = (selector) => {
-  const element = document.querySelector(selector)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
 }
 </script>

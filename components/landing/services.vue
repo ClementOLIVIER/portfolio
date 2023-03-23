@@ -100,9 +100,14 @@
           hover:bg-orange-900
           transition duration-300
         "
+        @click.prevent="scrollToSection('#contact')"
       >
         Get in touch
       </NuxtLink>
     </div>
   </section>
 </template>
+
+<script setup>
+import { scrollToSection } from '~/utils/ux'
+</script>
