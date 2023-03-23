@@ -90,8 +90,7 @@
     </div>
     <!-- Call to action -->
     <div class="mt-16 flex justify-center">
-      <NuxtLink
-        to="/#contact"
+      <button
         class="
           px-6 py-2
           rounded-xl
@@ -103,7 +102,7 @@
         @click.prevent="scrollToSection('#contact')"
       >
         Get in touch
-      </NuxtLink>
+      </button>
     </div>
   </section>
 </template>
