@@ -1,15 +1,14 @@
 <template>
   <header
     class="
-      sticky top-0
-      z-10
+      fixed
       w-full
       px-4 py-3
       bg-white
       border-b border-gray-200
     "
   >
-    <nav
+    <div
       class="flex flex-wrap items-center justify-between"
     >
       <!-- My Name -->
@@ -37,7 +36,7 @@
         </button>
       </div>
       <!-- Menu -->
-      <div
+      <nav
         :class="isOpen ? 'block' : 'hidden'"
         class="
         w-full
@@ -49,7 +48,7 @@
         md:w-auto  md:pt-0
         "
       >
-        <div
+        <ul
           class="
             flex flex-col
             md:flex-row md:justify-end
@@ -103,15 +102,18 @@
             to="/contact"
             class="
               px-4 py-2
-              bg-orange-700 text-white rounded-md
-              hover:bg-orange-800
+              rounded-md
+              font-semibold
+              bg-orange-700 text-white
+              hover:bg-orange-900
+              transition duration-300
             "
           >
             Hire me
           </NuxtLink>
-        </div>
-      </div>
-    </nav>
+        </ul>
+      </nav>
+    </div>
   </header>
 </template>
 

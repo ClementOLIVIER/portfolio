@@ -2,9 +2,9 @@
   <!-- Landing Page-->
   <section
     class="
-      min-h-screen
+      h-screen
       flex items-center justify-center
-      pt-10 md:pt-0
+      pt-36 sm:pt-12 md:pt-0
       bg-gradient-to-r from-background-200 to-background-300
     "
   >
@@ -24,9 +24,12 @@
           <NuxtLink
             to="/contact"
             class="
-              bg-orange-700 text-white
+              px-6 py-2
+              rounded-xl
               font-semibold
-              rounded-full py-2 px-6 hover:bg-purple-900 focus:outline-none focus:ring-2 transition duration-300 ease-in-out
+              bg-orange-700 text-white
+              hover:bg-orange-900
+              transition duration-300
             "
           >
             Hire me
