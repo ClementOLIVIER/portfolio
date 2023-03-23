@@ -55,6 +55,17 @@
             md:gap-2 md:my-auto"
         >
           <NuxtLink
+            to="/"
+            class="
+            px-3 py-2
+            rounded-md
+            text-gray-900
+            hover:bg-gray-200
+          "
+          >
+            Home
+          </NuxtLink>
+          <NuxtLink
             to="/services"
             class="
             px-3 py-2
