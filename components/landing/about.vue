@@ -6,7 +6,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <img
-          src="~/assets/images/your-image.jpg"
+          src="~/assets/images/profile.png"
           alt="Your Name"
           class="w-full h-auto rounded-md"
         >
