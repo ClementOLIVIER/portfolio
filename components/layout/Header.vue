@@ -55,24 +55,13 @@
             md:gap-2 md:my-auto"
         >
           <NuxtLink
-            to="/about"
-            class="
-              px-3 py-2
-              rounded-md
-              text-gray-900
-              hover:bg-gray-200
-            "
-          >
-            About Me
-          </NuxtLink>
-          <NuxtLink
             to="/services"
             class="
-              px-3 py-2
-              rounded-md
-              text-gray-900
-              hover:bg-gray-200
-            "
+            px-3 py-2
+            rounded-md
+            text-gray-900
+            hover:bg-gray-200
+          "
           >
             Services
           </NuxtLink>
@@ -88,7 +77,7 @@
             Portfolio
           </NuxtLink>
           <NuxtLink
-            to="/blog"
+            to="/about"
             class="
               px-3 py-2
               rounded-md
@@ -96,7 +85,7 @@
               hover:bg-gray-200
             "
           >
-            Blog
+            About Me
           </NuxtLink>
           <NuxtLink
             to="/contact"
