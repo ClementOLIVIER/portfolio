@@ -13,14 +13,14 @@
       class="flex flex-wrap items-center justify-between"
     >
       <!-- My Name -->
-      <NuxtLink
+      <button
         to="/"
         class="flex items-center text-gray-900"
       >
         <span class="text-xl font-semibold">
           Clément OLIVIER
         </span>
-      </NuxtLink>
+      </button>
       <!-- Toggle Mobile Menu -->
       <div class="block md:hidden">
         <button
@@ -55,52 +55,54 @@
             md:flex-row md:justify-end
             md:gap-2 md:my-auto"
         >
-          <NuxtLink
-            to="/#hero"
+          <button
             class="
-            px-3 py-2
-            rounded-md
-            text-gray-900
-            hover:bg-gray-200
-          "
+              px-3 py-2
+              rounded-md
+              text-gray-900
+              hover:bg-gray-200
+            "
+            @click.prevent="scrollToSection('#hero')"
           >
             Home
-          </NuxtLink>
-          <NuxtLink
-            to="/#services"
+          </button>
+          <button
             class="
-            px-3 py-2
-            rounded-md
-            text-gray-900
-            hover:bg-gray-200
-          "
+              px-3 py-2
+              rounded-md
+              text-gray-900
+              hover:bg-gray-200
+            "
+            @click.prevent="scrollToSection('#services')"
           >
             Services
-          </NuxtLink>
-          <NuxtLink
-            to="/portfolio"
+          </button>
+          <button
+            to="/#portfolio"
             class="
               px-3 py-2
               rounded-md
               text-gray-900
               hover:bg-gray-200
             "
+            @click.prevent="scrollToSection('#portfolio')"
           >
             Portfolio
-          </NuxtLink>
-          <NuxtLink
-            to="/about"
+          </button>
+          <button
+            to="/#about"
             class="
               px-3 py-2
               rounded-md
               text-gray-900
               hover:bg-gray-200
             "
+            @click.prevent="scrollToSection('#about')"
           >
             About Me
-          </NuxtLink>
-          <NuxtLink
-            to="/contact"
+          </button>
+          <button
+            to="/#contact"
             class="
               px-4 py-2
               rounded-md
@@ -109,9 +111,10 @@
               hover:bg-orange-900
               transition duration-300
             "
+            @click.prevent="scrollToSection('#contact')"
           >
-            Hire me
-          </NuxtLink>
+            Contact me
+          </button>
         </ul>
       </nav>
     </div>
@@ -123,5 +126,13 @@ const isOpen = ref(false)
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
+}
+
+// TODO: Move to a utils file
+const scrollToSection = (selector) => {
+  const element = document.querySelector(selector)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
 }
 </script>

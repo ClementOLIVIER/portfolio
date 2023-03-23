@@ -22,7 +22,7 @@
         </p>
         <div class="flex justify-center items-center">
           <NuxtLink
-            to="/contact"
+            to="/#contact"
             class="
               px-6 py-2
               rounded-xl
