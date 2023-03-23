@@ -1,7 +1,6 @@
 <template>
   <section
     class="
-      h-screen
       container
       mx-auto
       pt-24
@@ -16,7 +15,7 @@
         <img
           src="~/assets/images/nlp-icon.png"
           alt="NLP Icon"
-          class="w-20 h-20 mb-4"
+          class="w-36 h-36 mb-4"
         >
         <h2 class="text-2xl font-semibold mb-4">
           Natural Language Processing
@@ -30,7 +29,7 @@
         <img
           src="~/assets/images/data-science-icon.png"
           alt="Data Science Icon"
-          class="w-20 h-20 mb-4"
+          class="w-36 h-36 mb-4"
         >
         <h2 class="text-2xl font-semibold mb-4">
           Data Science
@@ -44,7 +43,7 @@
         <img
           src="~/assets/images/full-stack-icon.png"
           alt="Full Stack Icon"
-          class="w-20 h-20 mb-4"
+          class="w-36 h-36 mb-4"
         >
         <h2 class="text-2xl font-semibold mb-4">
           Full Stack Development
