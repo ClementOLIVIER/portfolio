@@ -2,7 +2,6 @@
   <!-- Landing Page-->
   <section
     class="
-      h-screen
       flex items-center justify-center
       pt-36 sm:pt-12 md:pt-0
       bg-gradient-to-r from-background-200 to-background-300

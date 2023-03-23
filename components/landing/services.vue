@@ -1,7 +1,6 @@
 <template>
   <section
     class="
-      h-screen
       container
       mx-auto
       pt-24
