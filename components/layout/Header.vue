@@ -4,6 +4,7 @@
       fixed
       w-full
       px-4 py-3
+      z-50
       bg-white
       border-b border-gray-200
     "
@@ -55,7 +56,7 @@
             md:gap-2 md:my-auto"
         >
           <NuxtLink
-            to="/"
+            to="/#hero"
             class="
             px-3 py-2
             rounded-md
@@ -66,7 +67,7 @@
             Home
           </NuxtLink>
           <NuxtLink
-            to="/services"
+            to="/#services"
             class="
             px-3 py-2
             rounded-md
