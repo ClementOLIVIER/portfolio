@@ -1,16 +1,12 @@
 export default defineNuxtConfig({
-  modules: [],
+  modules: [
+    'nuxt-icon'
+  ],
   css: ['~/assets/css/tailwind.css'],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {}
     }
-  },
-  colorMode: {
-    classSuffix: ''
-  },
-  headlessui: {
-    prefix: ''
   }
 })

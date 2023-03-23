@@ -1,5 +1,5 @@
 # Build Image
-FROM node:19-alpine AS BUILD_IMAGE
+FROM node:18-alpine AS BUILD_IMAGE
 
 WORKDIR /app
 
@@ -23,7 +23,7 @@ RUN npm prune --omit=dev
 RUN npm install -g node-prune
 RUN node-prune
 
-# Remove remaining dev dependencies
+# Remove remaining dev dependencies (TODO: Should be checked with new versions)
 RUN rm -rf node_modules/typescript
 RUN rm -rf node_modules/@azure
 RUN rm -rf node_modules/@babel
@@ -48,7 +48,7 @@ RUN rm -rf node_modules/css-tree
 RUN rm -rf node_modules/@rollup
 
 # Run Image
-FROM node:19-alpine
+FROM node:18-alpine
 
 WORKDIR /app
 
