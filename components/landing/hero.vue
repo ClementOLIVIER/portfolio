@@ -1,5 +1,4 @@
 <template>
-  <!-- Landing Page-->
   <section
     class="
       h-screen
@@ -12,13 +11,13 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-1 mx-12">
       <div class="flex flex-col justify-center items-center text-left text-white backdrop-blur-lg pl-4">
         <h2 class="text-xl md:text-xl mb-4 text-white">
-          Hi, I'm Clément OLIVIER 👋
+          {{ content.title }}
         </h2>
         <h1 class="text-2xl font mb-8">
-          Data Scientist, NLP Expert & Full Stack Developer
+          {{ content.subtitle }}
         </h1>
         <p class="text-lg mb-8 font-text">
-          I help people design and implement digital solutions to solve complex problems using latest technologies.
+          {{ content.description }}
         </p>
         <div class="flex justify-center items-center">
           <button
@@ -32,7 +31,7 @@
             "
             @click.prevent="scrollToSection('#contact')"
           >
-            Contact Me
+            {{ content.cta }}
           </button>
         </div>
       </div>
@@ -68,4 +67,15 @@
 
 <script setup>
 import { scrollToSection } from '~~/utils/ux'
+
+const language = useState('language')
+
+const { data } = await useAsyncData(
+  'hero',
+  () => queryContent('hero').find()
+)
+
+const content = computed(() => {
+  return data.value.find(item => item._path === `/hero/${language.value}`)
+})
 </script>

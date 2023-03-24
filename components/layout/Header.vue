@@ -21,8 +21,10 @@
           class="
             text-xl font-text font-bold tracking-wider
             text-gray-900
+            inline-flex items-center
           "
         >
+          <span><img src="/favicon.ico" class="w-8 h-8 mr-2"></span>
           Clément OLIVIER
         </h1>
       </button>
@@ -70,7 +72,7 @@
             "
             @click.prevent="scrollToSection('#hero')"
           >
-            {{ headerContent.home }}
+            {{ content.home }}
           </button>
           <button
             class="
@@ -80,7 +82,7 @@
             "
             @click.prevent="scrollToSection('#services')"
           >
-            {{ headerContent.services }}
+            {{ content.services }}
           </button>
           <button
             to="/#portfolio"
@@ -91,7 +93,7 @@
             "
             @click.prevent="scrollToSection('#portfolio')"
           >
-            {{ headerContent.portfolio }}
+            {{ content.portfolio }}
           </button>
           <button
             to="/#about"
@@ -102,7 +104,7 @@
             "
             @click.prevent="scrollToSection('#about')"
           >
-            {{ headerContent.about }}
+            {{ content.about }}
           </button>
           <button
             to="/#contact"
@@ -116,7 +118,7 @@
             "
             @click.prevent="scrollToSection('#contact')"
           >
-            {{ headerContent.contact }}
+            {{ content.contact }}
           </button>
           <div>
             <button
@@ -163,27 +165,8 @@
 <script setup>
 import { scrollToSection } from '~/utils/ux'
 
-// Menu
-const isOpen = ref(false)
-
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value
-}
-
-// Language
-const language = useState('language', () => 'en')
-const isLanguageOpen = ref(false)
-
-const toggleLanguage = () => {
-  isLanguageOpen.value = !isLanguageOpen.value
-}
-
-const changeLanguage = (lang) => {
-  language.value = lang
-  isLanguageOpen.value = false
-}
-
-const headerMultiContent = {
+// 📒 Content
+const multiContent = {
   en: {
     home: 'Home',
     services: 'Services',
@@ -200,11 +183,34 @@ const headerMultiContent = {
   }
 }
 
+// Menu
+const isOpen = ref(false)
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value
+}
+
+// Language
+const language = useState('language', () => 'en')
+
+// TODO: State should be deduced from the user location
+
+const isLanguageOpen = ref(false)
+
+const toggleLanguage = () => {
+  isLanguageOpen.value = !isLanguageOpen.value
+}
+
+const changeLanguage = (lang) => {
+  language.value = lang
+  isLanguageOpen.value = false
+}
+
 const languageIcons = {
   en: '🇬🇧',
   fr: '🇫🇷'
 }
 
-const headerContent = computed(() => headerMultiContent[language.value])
+const content = computed(() => multiContent[language.value])
 
 </script>
