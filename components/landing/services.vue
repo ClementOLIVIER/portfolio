@@ -7,7 +7,7 @@
     "
   >
     <h1 class="text-4xl font-bold text-center mb-10 ">
-      Services
+      {{ sectionName }}
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- NLP Service -->
@@ -108,5 +108,11 @@
 </template>
 
 <script setup>
+import { useSections } from '@/stores/sections'
 import { scrollToSection } from '~/utils/ux'
+
+// 📒 Content
+const sections = useSections()
+const sectionName = sections.getSectionName('services')
+
 </script>

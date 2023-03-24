@@ -163,9 +163,8 @@
 </template>
 
 <script setup>
-import { scrollToSection } from '~/utils/ux'
-
 import { useSections } from '@/stores/sections'
+import { scrollToSection } from '~/utils/ux'
 
 // Menu
 const isOpen = ref(false)
@@ -195,5 +194,5 @@ const changeLanguage = (lang) => {
 
 // 📒 Content
 const sections = useSections()
-const sectionNames = computed(() => sections.getSectionNames(language.value))
+const sectionNames = computed(() => sections.getSectionNames())
 </script>
