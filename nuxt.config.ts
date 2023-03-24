@@ -1,7 +1,8 @@
 export default defineNuxtConfig({
   modules: [
     'nuxt-icon',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@pinia/nuxt'
   ],
   css: ['~/assets/css/tailwind.css'],
   postcss: {

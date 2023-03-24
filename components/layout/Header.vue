@@ -165,6 +165,8 @@
 <script setup>
 import { scrollToSection } from '~/utils/ux'
 
+import { useSections } from '@/stores/sections'
+
 // Menu
 const isOpen = ref(false)
 
@@ -192,13 +194,6 @@ const changeLanguage = (lang) => {
 }
 
 // 📒 Content
-const { data } = await useAsyncData(
-  'section-names',
-  () => queryContent('section-names').find()
-)
-
-const sectionNames = computed(() => {
-  return data.value.find(item => item._path === `/section-names/${language.value}`)
-})
-
+const sections = useSections()
+const sectionNames = computed(() => sections.getSectionNames(language.value))
 </script>
