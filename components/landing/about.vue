@@ -5,13 +5,6 @@
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
-        <img
-          src="~/assets/images/profile.png"
-          alt="Your Name"
-          class="w-full h-auto rounded-md"
-        >
-      </div>
-      <div>
         <p>
           <!-- Write a brief introduction about yourself -->
         </p>
