@@ -14,19 +14,24 @@
     >
       <!-- My Name -->
       <button
-        to="/"
-        class="flex items-center text-gray-900"
+        class="flex items-center"
+        @click="scrollToSection('#hero')"
       >
-        <span class="text-xl font-semibold">
+        <h1
+          class="
+            text-xl font-text font-bold tracking-wider
+            text-gray-900
+          "
+        >
           Clément OLIVIER
-        </span>
+        </h1>
       </button>
       <!-- Toggle Mobile Menu -->
       <div class="block md:hidden">
         <button
           class="
             flex items-center p-2
-            text-gray-900 rounded-lg
+            rounded-lg
             hover:bg-gray-200
             transition-colors duration-200
           "
@@ -53,13 +58,14 @@
           class="
             flex flex-col
             md:flex-row md:justify-end
-            md:gap-2 md:my-auto"
+            md:gap-2 md:my-auto
+            text-gray-900
+          "
         >
           <button
             class="
               px-3 py-2
               rounded-md
-              text-gray-900
               hover:bg-gray-200
             "
             @click.prevent="scrollToSection('#hero')"
@@ -70,7 +76,6 @@
             class="
               px-3 py-2
               rounded-md
-              text-gray-900
               hover:bg-gray-200
             "
             @click.prevent="scrollToSection('#services')"
@@ -82,7 +87,6 @@
             class="
               px-3 py-2
               rounded-md
-              text-gray-900
               hover:bg-gray-200
             "
             @click.prevent="scrollToSection('#portfolio')"
@@ -94,7 +98,6 @@
             class="
               px-3 py-2
               rounded-md
-              text-gray-900
               hover:bg-gray-200
             "
             @click.prevent="scrollToSection('#about')"
@@ -107,8 +110,8 @@
               px-4 py-2
               rounded-md
               font-semibold
-              bg-orange-700 text-white
-              hover:bg-orange-900
+              bg-salmon-500 text-white
+              hover:bg-salmon-900
               transition duration-300
             "
             @click.prevent="scrollToSection('#contact')"

@@ -5,20 +5,20 @@
       h-screen
       flex items-center justify-center
       pt-36 sm:pt-12 md:pt-0
-      bg-gradient-to-r from-background-200 to-background-300
+      bg-gradient-to-r from-navy-800 to-navy-500
     "
   >
     <!-- Hero Content -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-1 mx-12">
       <div class="flex flex-col justify-center items-center text-left text-white backdrop-blur-lg pl-4">
-        <h1 class="text-3xl md:text-3xl font-bold mb-4 text-white">
-          Hello, I'm <span class="text-white">Clément OLIVIER</span>
+        <h2 class="text-xl md:text-xl mb-4 text-white">
+          Hi, I'm Clément OLIVIER 👋
+        </h2>
+        <h1 class="text-2xl font mb-8">
+          Data Scientist, NLP Expert & Full Stack Developer
         </h1>
-        <p class="text-lg md:text-xl mb-8">
-          Data Scientist, Product Designer & Full Stack Developer
-        </p>
-        <p class="text-sm md:text-lg mb-8">
-          I'm data scientist and full-stack developer with a passion for creating meaningful and engaging solutions. Dive in to explore my work and learn how I've used cutting-edge technologies to solve complex problems across various domains.
+        <p class="text-lg mb-8 font-text">
+          I help people design and implement digital solutions to solve complex problems using latest technologies.
         </p>
         <div class="flex justify-center items-center">
           <button
@@ -26,18 +26,18 @@
               px-6 py-2
               rounded-xl
               font-semibold
-              bg-orange-700 text-white
-              hover:bg-orange-900
+              bg-salmon-600 text-white
+              hover:bg-salmon-800
               transition duration-300
             "
             @click.prevent="scrollToSection('#contact')"
           >
-            Hire me
+            Contact Me
           </button>
         </div>
       </div>
       <!-- Hero Banner -->
-      <div class="relative flex justify-center items-center">
+      <div class="flex justify-center items-center relative">
         <div
           class="flex justify-center items-center"
         >

@@ -1,6 +1,6 @@
 <!-- TODO: Update links -->
 <template>
-  <footer class="bg-gray-100 py-6">
+  <footer class="bg-gray-100 py-6 font-barlow">
     <div class="container mx-auto px-4 text-center">
       <div class="flex justify-center space-x-4">
         <a
