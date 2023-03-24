@@ -72,7 +72,7 @@
             "
             @click.prevent="scrollToSection('#hero')"
           >
-            {{ content.home }}
+            {{ sectionNames.home }}
           </button>
           <button
             class="
@@ -82,7 +82,7 @@
             "
             @click.prevent="scrollToSection('#services')"
           >
-            {{ content.services }}
+            {{ sectionNames.services }}
           </button>
           <button
             to="/#portfolio"
@@ -93,7 +93,7 @@
             "
             @click.prevent="scrollToSection('#portfolio')"
           >
-            {{ content.portfolio }}
+            {{ sectionNames.portfolio }}
           </button>
           <button
             to="/#about"
@@ -104,7 +104,7 @@
             "
             @click.prevent="scrollToSection('#about')"
           >
-            {{ content.about }}
+            {{ sectionNames.about }}
           </button>
           <button
             to="/#contact"
@@ -118,7 +118,7 @@
             "
             @click.prevent="scrollToSection('#contact')"
           >
-            {{ content.contact }}
+            {{ sectionNames.contact }}
           </button>
           <div>
             <button
@@ -165,24 +165,6 @@
 <script setup>
 import { scrollToSection } from '~/utils/ux'
 
-// 📒 Content
-const multiContent = {
-  en: {
-    home: 'Home',
-    services: 'Services',
-    portfolio: 'Portfolio',
-    about: 'About Me',
-    contact: 'Contact'
-  },
-  fr: {
-    home: 'Accueil',
-    services: 'Services',
-    portfolio: 'Portfolio',
-    about: 'À Propos',
-    contact: 'Contact'
-  }
-}
-
 // Menu
 const isOpen = ref(false)
 
@@ -192,9 +174,12 @@ const toggleMenu = () => {
 
 // Language
 const language = useState('language', () => 'en')
+const languageIcons = {
+  en: '🇬🇧',
+  fr: '🇫🇷'
+}
 
 // TODO: State should be deduced from the user location
-
 const isLanguageOpen = ref(false)
 
 const toggleLanguage = () => {
@@ -206,11 +191,14 @@ const changeLanguage = (lang) => {
   isLanguageOpen.value = false
 }
 
-const languageIcons = {
-  en: '🇬🇧',
-  fr: '🇫🇷'
-}
+// 📒 Content
+const { data } = await useAsyncData(
+  'section-names',
+  () => queryContent('section-names').find()
+)
 
-const content = computed(() => multiContent[language.value])
+const sectionNames = computed(() => {
+  return data.value.find(item => item._path === `/section-names/${language.value}`)
+})
 
 </script>

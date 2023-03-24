@@ -66,10 +66,11 @@
 </template>
 
 <script setup>
-import { scrollToSection } from '~~/utils/ux'
+import { scrollToSection } from '~/utils/ux'
 
 const language = useState('language')
 
+// 📒 Content
 const { data } = await useAsyncData(
   'hero',
   () => queryContent('hero').find()
