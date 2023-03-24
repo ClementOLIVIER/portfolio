@@ -4,8 +4,6 @@
     <main>
       <slot />
     </main>
-    <footer>
-      This is a footer
-    </footer>
+    <LayoutFooter />
   </div>
 </template>
