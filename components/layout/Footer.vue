@@ -37,6 +37,6 @@
 </template>
 
 <script>
-const currentYear = new Date().getFullYear()
-document.getElementById('current-year').innerText = currentYear
+// const currentYear = new Date().getFullYear()
+// document.getElementById('current-year').innerText = currentYear
 </script>

@@ -1,25 +1,40 @@
 <script setup>
-document.addEventListener('DOMContentLoaded', () => {
-  const tabBtns = document.querySelectorAll('.tab-btn')
-  const tabPanes = document.querySelectorAll('.tab-pane')
+// document.addEventListener('DOMContentLoaded', () => {
+//   const tabBtns = document.querySelectorAll('.tab-btn')
+//   const tabPanes = document.querySelectorAll('.tab-pane')
 
-  tabBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const tab = btn.dataset.tab
+//   tabBtns.forEach((btn) => {
+//     btn.addEventListener('click', () => {
+//       const tab = btn.dataset.tab
 
-      tabBtns.forEach((otherBtn) => {
-        otherBtn.classList.toggle('active', otherBtn === btn)
-      })
+//       tabBtns.forEach((otherBtn) => {
+//         otherBtn.classList.toggle('active', otherBtn === btn)
+//       })
 
-      tabPanes.forEach((pane) => {
-        pane.classList.toggle('active', pane.dataset.tab === tab)
-      })
-    })
-  })
-})
+//       tabPanes.forEach((pane) => {
+//         pane.classList.toggle('active', pane.dataset.tab === tab)
+//       })
+//     })
+//   })
+// })
 </script>
 
 <template>
+  <div class="flex items-center bg-gray-100 rounded-full py-1 px-2 space-x-1">
+    <button x-bind:class="active === 'preview' ? 'bg-white text-secondary shadow-sm' : 'border-ui-tertiary hover:opacity-75 text-ui-secondary hover:bg-gray-200'" class="w-32 rounded-full py-1 font-bold transition flex items-center text-center justify-center bg-white text-secondary shadow-sm" @click="active = 'preview'">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+      </svg>
+      Preview
+    </button>
+    <button x-bind:class="active === 'code' ? 'bg-white text-secondary shadow-sm' : 'border-ui-tertiary hover:opacity-75 text-ui-secondary hover:bg-gray-200'" class="w-32 rounded-full py-1 font-bold transition flex items-center text-center justify-center border-ui-tertiary hover:opacity-75 text-ui-secondary hover:bg-gray-200" @click="active = 'code'">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+      Code
+    </button>
+  </div>
   <section id="about-me" class="bg-gray-100 py-12">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold mb-6">
