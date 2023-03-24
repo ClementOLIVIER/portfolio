@@ -70,7 +70,7 @@
             "
             @click.prevent="scrollToSection('#hero')"
           >
-            Home
+            {{ headerContent.home }}
           </button>
           <button
             class="
@@ -80,7 +80,7 @@
             "
             @click.prevent="scrollToSection('#services')"
           >
-            Services
+            {{ headerContent.services }}
           </button>
           <button
             to="/#portfolio"
@@ -91,7 +91,7 @@
             "
             @click.prevent="scrollToSection('#portfolio')"
           >
-            Portfolio
+            {{ headerContent.portfolio }}
           </button>
           <button
             to="/#about"
@@ -102,7 +102,7 @@
             "
             @click.prevent="scrollToSection('#about')"
           >
-            About Me
+            {{ headerContent.about }}
           </button>
           <button
             to="/#contact"
@@ -116,8 +116,44 @@
             "
             @click.prevent="scrollToSection('#contact')"
           >
-            Contact me
+            {{ headerContent.contact }}
           </button>
+          <div>
+            <button
+              class="
+                p-2
+                rounded-md
+                hover:bg-gray-200
+              "
+              @click="toggleLanguage"
+            >
+              <span>{{ languageIcons[language] }}</span>
+            </button>
+            <div
+              v-if="isLanguageOpen"
+              class="
+                absolute mt-2
+                text-left
+                bg-white
+                border border-gray-200
+                rounded-md
+                shadow-lg
+              "
+            >
+              <li v-for="lang in Object.keys(languageIcons)" :key="lang">
+                <button
+                  class="
+                  p-2
+                  hover:bg-gray-100
+                  focus:outline-none
+                "
+                  @click="changeLanguage(lang)"
+                >
+                  {{ languageIcons[lang] }}
+                </button>
+              </li>
+            </div>
+          </div>
         </ul>
       </nav>
     </div>
@@ -127,9 +163,48 @@
 <script setup>
 import { scrollToSection } from '~/utils/ux'
 
+// Menu
 const isOpen = ref(false)
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }
+
+// Language
+const language = useState('language', () => 'en')
+const isLanguageOpen = ref(false)
+
+const toggleLanguage = () => {
+  isLanguageOpen.value = !isLanguageOpen.value
+}
+
+const changeLanguage = (lang) => {
+  language.value = lang
+  isLanguageOpen.value = false
+}
+
+const headerMultiContent = {
+  en: {
+    home: 'Home',
+    services: 'Services',
+    portfolio: 'Portfolio',
+    about: 'About Me',
+    contact: 'Contact'
+  },
+  fr: {
+    home: 'Accueil',
+    services: 'Services',
+    portfolio: 'Portfolio',
+    about: 'À Propos',
+    contact: 'Contact'
+  }
+}
+
+const languageIcons = {
+  en: '🇬🇧',
+  fr: '🇫🇷'
+}
+
+const headerContent = computed(() => headerMultiContent[language.value])
+
 </script>
