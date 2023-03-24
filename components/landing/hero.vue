@@ -67,5 +67,5 @@
 </template>
 
 <script setup>
-import { scrollToSection } from '~/utils/ux'
+import { scrollToSection } from '~~/utils/ux'
 </script>
